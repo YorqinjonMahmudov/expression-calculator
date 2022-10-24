@@ -7,6 +7,7 @@ import org.apache.catalina.core.StandardContext;
 import org.apache.catalina.startup.Tomcat;
 import org.apache.catalina.webresources.DirResourceSet;
 import org.apache.catalina.webresources.StandardRoot;
+import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.utils.URIBuilder;
@@ -65,6 +66,7 @@ public class CalcServletTest {
 
     }
 
+
     @AfterAll
     public static void stopServer() throws LifecycleException {
         tomcat.stop();
@@ -88,6 +90,8 @@ public class CalcServletTest {
 
             HttpGet httpGet = new HttpGet(uri);
             response = httpClient.execute(httpGet);
+            HttpEntity entity = response.getEntity();
+
             final String responseText = EntityUtils.toString(response.getEntity()).trim();
 
             assertEquals(String.valueOf(result), responseText);

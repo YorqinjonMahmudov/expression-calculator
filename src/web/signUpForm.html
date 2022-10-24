@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SignUp</title>
+</head>
+<body>
+
+<form
+        method="post"
+        action="/signUp">
+
+    <label for="ism">
+        <input required
+               type="text"
+               id="ism"
+               name="firstName"/>
+    </label>
+    <br>
+
+    <label for="maili">
+        <input required type="text"
+               id="maili"
+               name="email"/>
+    </label>
+    <br>
+
+    <label for="paroli">
+        <input required type="text"
+               id="paroli"
+               name="password"/>
+    </label>
+    <br>
+
+    <label for="qaytaParoli">
+        <input required type="text"
+               id="qaytaParoli"
+               name="prePassword"/>
+    </label>
+    <br>
+
+    <button
+            type="submit"
+            style="background-color: #13dc13">Register
+    </button>
+
+    <button
+            type="button"
+            style="background-color: #8bab8b">
+        <a href="/signIn">I have already account</a>
+    </button>
+</form>
+
+</body>
+</html>
