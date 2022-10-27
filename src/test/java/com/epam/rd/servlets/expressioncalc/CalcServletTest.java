@@ -90,7 +90,6 @@ public class CalcServletTest {
 
             HttpGet httpGet = new HttpGet(uri);
             response = httpClient.execute(httpGet);
-            HttpEntity entity = response.getEntity();
 
             final String responseText = EntityUtils.toString(response.getEntity()).trim();
 

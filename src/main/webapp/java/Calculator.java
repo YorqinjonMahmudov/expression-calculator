@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
 
-@WebServlet("/calc")
+@WebServlet(name = "Calculator", urlPatterns = "/calc")
 public class Calculator extends HttpServlet {
 
     @Override
